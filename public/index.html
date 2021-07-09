@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script/index.js"></script>
+    <title>Newsletter App</title>
+  </head>
+  <body>
+    <h1>Let's keep in touch!</h1>
+    <div class="form-wrapper">
+      <form action="/" method="POST">
+        <label for="fname">First Name</label>
+        <input
+          name="fname"
+          type="text"
+          placeholder="Your first name?"
+          required
+          autofocus
+        />
+        <label for="lname">Last Name</label>
+        <input
+          name="lname"
+          type="text"
+          placeholder="Your last name?"
+          required
+        />
+        <label for="email`">E-mail</label>
+        <input name="email" type="text" placeholder="Best email?" required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div class="contact-info-wrapper">
+      <p class="show-contact">
+        Total contacts: <span class="contact-data">5</span>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: blue;
+}
+
+.form-wrapper {
+  max-width: 300px;
+  padding: 15px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 7px 10px;
+}
+
+button {
+  padding: 5px 10px;
+}
+
+.contact-info-wrapper {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 7px 12px;
+  margin-top: 10px;
+  width: 150px;
+}
+
+.contact-info-wrapper p {
+  text-align: center;
+}
