@@ -1,3 +1,3 @@
-# mailchimp-api
+# newsletter-app
 
 Coming Soon.
