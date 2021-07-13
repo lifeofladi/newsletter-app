@@ -1,12 +1,8 @@
 ## Description
 
----
-
 A Node js web application that collects sign-up form data and sends it directly to an audience list on MailChimp via MailChimp's API.
 
 ## Tech Used
-
----
 
 - Node
 - Express
@@ -14,8 +10,6 @@ A Node js web application that collects sign-up form data and sends it directly 
 - HTML & CSS
 
 ## Author
-
----
 
 :man: Ladi Awolaja
 
