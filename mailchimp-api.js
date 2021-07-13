@@ -1,21 +1,14 @@
 const axios = require("axios");
 const BASE_URL = "https://us6.api.mailchimp.com/3.0/lists/";
-const listID = "4774f527d5";
 const config = {
   headers: {
     Authorization: "apiKey: 5a684147a7465e5ae46a7ada3167bce1-us6",
   },
 };
 
-function MailChimp() {
-  const BASE_URL = "https://us6.api.mailchimp.com/3.0/lists/";
-  const listID = "4774f527d5";
-  const config = {
-    headers: {
-      Authorization: "apiKey: 5a684147a7465e5ae46a7ada3167bce1-us6",
-    },
-  };
-  this.addContactToList = async function (fname, lname, email) {
+class MailChimp {
+  static async addContactToList(fname, lname, email) {
+    const listID = "4774f527d5";
     const data = {
       members: [
         {
@@ -31,15 +24,18 @@ function MailChimp() {
 
     try {
       const response = await axios.post(BASE_URL + listID, data, config);
-      if (response.status === 200) {
-        console.log("Data Successfully sent!");
+      if (response.data.error_count > 0) {
+        console.log("Problematic data!!\n", response.data.errors);
       }
+      if (response.data.error_count === 0) {
+        console.log("Data sent successfully!!");
+      }
+      //   console.log(response);
     } catch (error) {
       console.log(error);
     }
-  };
-
-  this.getTotalContacts = async function () {
+  }
+  static async getTotalContacts() {
     try {
       const response = await axios.get(BASE_URL + listID, config);
       if (response.status === 200) {
@@ -50,7 +46,7 @@ function MailChimp() {
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 }
 
 module.exports = MailChimp;
