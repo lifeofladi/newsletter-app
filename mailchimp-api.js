@@ -2,7 +2,7 @@ const axios = require("axios");
 const BASE_URL = "https://us6.api.mailchimp.com/3.0/lists/";
 const config = {
   headers: {
-    Authorization: "apiKey: 5a684147a7465e5ae46a7ada3167bce1-us6",
+    Authorization: `apiKey: ${process.env.MCAPI}`,
   },
 };
 
