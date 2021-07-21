@@ -3,7 +3,7 @@ const BASE_URL = "https://us6.api.mailchimp.com/3.0/lists/";
 const listID = "4774f527d5";
 const config = {
   headers: {
-    Authorization: `apiKey: ${process.env.MCAPI}`,
+    Authorization: `apiKey: ${process.env.MC_API}`,
   },
 };
 
