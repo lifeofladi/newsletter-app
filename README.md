@@ -6,6 +6,7 @@ A Node js web application that collects sign-up form data and sends it directly 
 
 - Node
 - Express
+- EJS
 - Axios
 - HTML & CSS
 
