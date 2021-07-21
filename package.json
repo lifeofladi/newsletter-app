@@ -9,7 +9,6 @@
   "author": "Ladi Awolaja",
   "license": "ISC",
   "dependencies": {
-    "@mailchimp/mailchimp_marketing": "^3.0.53",
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "joi": "^17.4.0",
