@@ -32,15 +32,15 @@ app.post("/", async (req, res) => {
       email,
     );
 
-    // console.log(status, "in try")
     if (status.isDelivered !== false) {
       statusMessage = `Thank you ${firstName}, we will be in touch!`;
       totalContacts = status.numOfContacts;
-      res.redirect("/");
     } else {
-      statusMessage = "Please try again";
-      res.redirect("/");
+      if ("errorMsg" in status) {
+        statusMessage = status.errorMsg;
+      }
     }
+    res.redirect("/");
   } catch (error) {
     console.log(error.message, "in post");
   }
