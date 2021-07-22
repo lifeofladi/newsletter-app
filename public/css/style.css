@@ -19,7 +19,7 @@ h1 {
 }
 
 .form-wrapper {
-  max-width: 300px;
+  min-width: 255px;
   padding: 15px;
   border: 1px solid grey;
   border-radius: 10px;
@@ -28,14 +28,24 @@ form {
   display: flex;
   flex-direction: column;
 }
+form .error {
+  color: red;
+  font-size: small;
+}
 
 input {
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   padding: 7px 10px;
+}
+
+.input-top {
+  /* background-color: blue; */
+  margin-top: 10px;
 }
 
 button {
   padding: 5px 10px;
+  margin-top: 10px;
 }
 
 .contact-info-wrapper {

@@ -4,7 +4,7 @@ A Node js web application that collects sign-up form data and sends it directly 
 
 ## Features
 
-- Front-end Form Validation
+- Front & Back End Form Validation
 - Asynchronous Programming
 - API Integration
 
@@ -19,4 +19,5 @@ A Node js web application that collects sign-up form data and sends it directly 
 ## Author
 
 :man: Ladi Awolaja
+
 :email: dev@lifeofladi.com

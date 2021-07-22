@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <script src="script/index.js"></script>
     <title>Newsletter App</title>
   </head>
   <body>
     <h1>Let's keep in touch!</h1>
     <div class="form-wrapper">
-      <form action="/" method="POST">
+      <form id="newsletter" action="/" method="POST">
         <label for="f-name">First Name</label>
         <input
           id="f-name"
@@ -21,7 +22,7 @@
           placeholder="Your first name?"
           required
         />
-        <label for="l-name">Last Name</label>
+        <label for="l-name" class="input-top">Last Name</label>
         <input
           id="l-name"
           name="lname"
@@ -29,11 +30,11 @@
           placeholder="Your last name?"
           required
         />
-        <label for="e-mail`">E-mail</label>
+        <label for="e-mail" class="input-top">E-mail</label>
         <input
           id="e-mail"
           name="email"
-          type="text"
+          type="email"
           placeholder="Best email?"
           required
         />

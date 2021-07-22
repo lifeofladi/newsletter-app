@@ -1,5 +1,5 @@
 console.log("connected!!");
 
-// $(document).ready(function () {
-//   alert("i'm working!");
-// });
+$(document).ready(function () {
+  $("#newsletter").validate();
+});
