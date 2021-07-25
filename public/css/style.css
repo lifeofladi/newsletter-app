@@ -89,12 +89,21 @@ label.error {
   padding-bottom: 0;
   font-size: 0.7rem;
 }
-.success-msg {
+
+.api-feedback {
   margin-top: 10px;
   font-weight: bold;
-  color: #7e853f;
   font-size: 0.9rem;
   display: none;
+}
+.success {
+  color: #7e853f;
+  display: block;
+}
+
+.error {
+  color: red;
+  display: block;
 }
 
 .show-contact {

@@ -24,15 +24,14 @@ class MailChimp {
 
     try {
       const response = await axios.post(BASE_URL + listID, data, config);
-      if (response.data.error_count > 0) {
+      if (
+        response.data.error_count > 0 &&
+        response.data.errors[0].error_code === "ERROR_CONTACT_EXISTS"
+      ) {
         console.log("Problematic data!!\n", response.data.errors);
-        if (response.data.errors[0].error_code === "ERROR_CONTACT_EXISTS")
-          return {
-            isDelivered: false,
-            errorMsg: "You are already on our list!",
-          };
         return {
           isDelivered: false,
+          errorMsg: "email exists",
         };
       }
       if (response.data.error_count === 0) {
