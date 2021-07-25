@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
   res.render("index", { message: statusMessage, listTotal: totalContacts });
 });
 
-//Handling POST request from home route
+//Handling POST request on home route
 router.post("/", async (req, res) => {
   const firstName = req.body.fname;
   const lastName = req.body.lname;

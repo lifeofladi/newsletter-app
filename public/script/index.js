@@ -16,6 +16,8 @@ $(document).ready(function () {
 
   //validation rules
   $("#newsletter").validate({
+    focusCleanup: true,
+    focusInvalid: false,
     rules: {
       fname: {
         minlength: 2,

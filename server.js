@@ -6,9 +6,10 @@ const home = require("./routes/home");
 //setting templating engine to EJS
 app.set("view engine", "ejs");
 
-//Allows you to parse url encoded values
+//parse url encoded values
 app.use(express.urlencoded({ extended: true }));
 
+//serve static files
 app.use(express.static("public"));
 
 app.use("/", home);
